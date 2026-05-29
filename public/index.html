@@ -36,6 +36,10 @@
             })
             document.getElementById("information").innerHTML = "username: " + response.data.username + " Password: " + response.data.password
         };
+
+        function logout(){
+            localStorage.removeItem("token");
+        }
     </script>
 
     <body>
@@ -59,7 +63,7 @@
         </div>
 
         <div>
-            <button onclick="">Logout</button>
+            <button onclick="logout()">Logout</button>
         </div>
     </body>
 </html>
