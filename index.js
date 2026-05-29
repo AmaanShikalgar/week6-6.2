@@ -83,6 +83,10 @@ function logger(req,res,next){
     next();
 }
 
+app.get("/",function(req,res){
+    res.sendFile(__dirname + "/public/index.html");
+})
+
 app.post("/SigningUp",logger,signUp);
 
 app.post("/SigningIn",logger,signIn);
